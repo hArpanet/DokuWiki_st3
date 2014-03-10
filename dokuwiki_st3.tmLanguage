@@ -81,6 +81,15 @@
 		</dict>
 
 
+		<!-- INCLUDES -->
+
+		<dict>
+			<key>include</key>
+			<string>#inline</string>
+			<key>comment</key>
+			<string>Include 'inline' items from repository below</string>
+		</dict>
+
 	</array>
 
 
@@ -91,6 +100,48 @@
  <!-- ########################################################################### -->
  <!-- ########################################################################### -->
  <!-- ########################################################################### -->
+
+	<key>repository</key>
+	<dict>
+		<key>inline</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+
+				<dict>
+					<key>comment</key>
+					<string>''monospaced text''</string>
+
+					<key>match</key>
+					<string>('')(.*?)(\1)</string>
+
+					<key>captures</key>
+					<dict>
+						<!-- make the apostrophe's (the 'containers') fade out -->
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+
+						<!-- highlight the actual monospaced text -->
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>monospace.dokuwiki_st3</string>
+						</dict>
+					</dict>
+				</dict>
+
+			</array>
+		</dict>
+	</dict>
+
 
 
 	<key>scopeName</key>

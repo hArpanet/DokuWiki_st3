@@ -52,6 +52,41 @@
 				<string>#6969FA</string>
 			</dict>
 		</dict>
+
+
+
+		<!-- GENERAL INLINE CONTAINERS -->
+		<!-- fade container tags to light grey  -->
+
+		<dict>
+			<key>name</key>
+			<string>Inline Container Chars </string>
+			<key>scope</key>
+			<string>container.inline</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aaaa</string>
+			</dict>
+		</dict>
+
+		<!-- MONOSPACED TEXT -->
+
+		<dict>
+			<key>name</key>
+			<string>Monospaced</string>
+			<key>scope</key>
+			<string>monospace</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#000000</string>
+				<key>background</key>
+				<string>#dddddd</string>
+			</dict>
+		</dict>
+
+
 	</array>
 
 	<key>uuid</key>
