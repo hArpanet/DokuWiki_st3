@@ -23,10 +23,20 @@
 		)</string>
 	<key>keyEquivalent</key>
 	<string>^~M</string>
+
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+
 	<key>name</key>
 	<string>Markdown</string>
 	<key>patterns</key>
 	<array>
+
+		<!-- NO IDEA! HEADINGS AND BLOCK STUFF?? -->
+
 		<dict>
 			<key>begin</key>
 			<string>(?x)^
@@ -70,6 +80,9 @@
 				</dict>
 			</array>
 		</dict>
+
+		<!-- DEFINITION LIST: UN-NUMBERED -->
+
 		<dict>
 			<key>begin</key>
 			<string>^[ ]{0,3}([*+-])(?=\s)</string>
@@ -93,6 +106,9 @@
 				</dict>
 			</array>
 		</dict>
+
+		<!-- DEFINITION LIST: NUMBERED -->
+
 		<dict>
 			<key>begin</key>
 			<string>^[ ]{0,3}[0-9]+(\.)(?=\s)</string>
@@ -116,6 +132,9 @@
 				</dict>
 			</array>
 		</dict>
+
+		<!-- VARIOUS BLOCKS - MARKDOWN DISABLED -->
+
 		<dict>
 			<key>begin</key>
 			<string>^(?=&lt;(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b)(?!.*?&lt;/\1&gt;)</string>
@@ -135,6 +154,9 @@
 				</dict>
 			</array>
 		</dict>
+
+		<!-- VARIOUS (ONE LINE) BLOCKS - MARKDOWN DISABLED -->
+
 		<dict>
 			<key>begin</key>
 			<string>^(?=&lt;(p|div|h[1-6]|blockquote|pre|table|dl|ol|ul|script|noscript|form|fieldset|iframe|math|ins|del)\b)</string>
@@ -152,6 +174,9 @@
 				</dict>
 			</array>
 		</dict>
+
+		<!-- [[REFERENCES TO OTHER PAGES]] -->
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -238,6 +263,9 @@
 			<key>name</key>
 			<string>meta.link.reference.def.markdown</string>
 		</dict>
+
+		<!-- HEADINGS -->
+
 		<dict>
 			<key>begin</key>
 			<string>^(?=\S)(?![=-]{3,}(?=$))</string>
@@ -286,6 +314,13 @@
 			</array>
 		</dict>
 	</array>
+
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+
 	<key>repository</key>
 	<dict>
 		<key>ampersand</key>
@@ -300,6 +335,7 @@
 			<key>name</key>
 			<string>meta.other.valid-ampersand.markdown</string>
 		</dict>
+
 		<key>block_quote</key>
 		<dict>
 			<key>begin</key>
@@ -391,6 +427,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>block_raw</key>
 		<dict>
 			<key>match</key>
@@ -398,6 +435,7 @@
 			<key>name</key>
 			<string>markup.raw.block.markdown</string>
 		</dict>
+
 		<key>bold</key>
 		<dict>
 			<key>begin</key>
@@ -410,7 +448,7 @@
 																	# Raw
 							  | \\[\\`*_{}\[\]()#.!+\-&gt;]?+			# Escapes
 							  | \[
-								(				
+								(
 								        (?&lt;square&gt;					# Named group
 											[^\[\]\\]				# Match most chars
 								          | \\.						# Escaped chars
@@ -521,6 +559,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>bracket</key>
 		<dict>
 			<key>comment</key>
@@ -533,6 +572,7 @@
 			<key>name</key>
 			<string>meta.other.valid-bracket.markdown</string>
 		</dict>
+
 		<key>escape</key>
 		<dict>
 			<key>match</key>
@@ -540,6 +580,7 @@
 			<key>name</key>
 			<string>constant.character.escape.markdown</string>
 		</dict>
+
 		<key>heading</key>
 		<dict>
 			<key>begin</key>
@@ -566,6 +607,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>image-inline</key>
 		<dict>
 			<key>captures</key>
@@ -649,7 +691,7 @@
 			<key>match</key>
 			<string>(?x:
 				\!							# Images start with !
-				(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])	
+				(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])
 											# Match the link text.
 				([ ])?						# Space not allowed
 				(\()						# Opening paren for url
@@ -665,6 +707,7 @@
 			<key>name</key>
 			<string>meta.image.inline.markdown</string>
 		</dict>
+
 		<key>image-ref</key>
 		<dict>
 			<key>captures</key>
@@ -705,6 +748,7 @@
 			<key>name</key>
 			<string>meta.image.reference.markdown</string>
 		</dict>
+
 		<key>inline</key>
 		<dict>
 			<key>patterns</key>
@@ -767,6 +811,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>italic</key>
 		<dict>
 			<key>begin</key>
@@ -779,7 +824,7 @@
 																	# Raw
 							  | \\[\\`*_{}\[\]()#.!+\-&gt;]?+			# Escapes
 							  | \[
-								(				
+								(
 								        (?&lt;square&gt;					# Named group
 											[^\[\]\\]				# Match most chars
 								          | \\.						# Escaped chars
@@ -891,6 +936,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>line-break</key>
 		<dict>
 			<key>match</key>
@@ -898,6 +944,7 @@
 			<key>name</key>
 			<string>meta.dummy.line-break</string>
 		</dict>
+
 		<key>link-email</key>
 		<dict>
 			<key>captures</key>
@@ -923,6 +970,7 @@
 			<key>name</key>
 			<string>meta.link.email.lt-gt.markdown</string>
 		</dict>
+
 		<key>link-inet</key>
 		<dict>
 			<key>captures</key>
@@ -948,6 +996,7 @@
 			<key>name</key>
 			<string>meta.link.inet.markdown</string>
 		</dict>
+
 		<key>link-inline</key>
 		<dict>
 			<key>captures</key>
@@ -1030,7 +1079,7 @@
 			</dict>
 			<key>match</key>
 			<string>(?x:
-				(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])	
+				(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])
 											# Match the link text.
 				([ ])?						# Space not allowed
 				(\()						# Opening paren for url
@@ -1046,6 +1095,7 @@
 			<key>name</key>
 			<string>meta.link.inline.markdown</string>
 		</dict>
+
 		<key>link-ref</key>
 		<dict>
 			<key>captures</key>
@@ -1086,6 +1136,7 @@
 			<key>name</key>
 			<string>meta.link.reference.markdown</string>
 		</dict>
+
 		<key>link-ref-literal</key>
 		<dict>
 			<key>captures</key>
@@ -1121,6 +1172,7 @@
 			<key>name</key>
 			<string>meta.link.reference.literal.markdown</string>
 		</dict>
+
 		<key>list-paragraph</key>
 		<dict>
 			<key>patterns</key>
@@ -1142,6 +1194,7 @@
 				</dict>
 			</array>
 		</dict>
+
 		<key>raw</key>
 		<dict>
 			<key>captures</key>
@@ -1162,6 +1215,7 @@
 			<key>name</key>
 			<string>markup.raw.inline.markdown</string>
 		</dict>
+
 		<key>separator</key>
 		<dict>
 			<key>match</key>
@@ -1170,6 +1224,13 @@
 			<string>meta.separator.markdown</string>
 		</dict>
 	</dict>
+
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+<!-- ##################################################### -->
+
 	<key>scopeName</key>
 	<string>text.html.markdown</string>
 	<key>uuid</key>
