@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>txt</string>
+		<string>dokuwiki</string>
+	</array>
+
+	<key>name</key>
+	<string>DokuWiki ST3</string>
+
+
+	<key>patterns</key>
+	<array>
+
+		<!-- INCLUDES -->
+
+		<dict>
+			<key>include</key>
+			<string>#php</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#inline</string>
+		</dict>
+
+
+
+		<!-- HEADINGS -->
+
+		<dict>
+			<key>comment</key>
+			<string>====== heading ======</string>
+			<key>name</key>
+			<string>headings.dokuwiki_st3</string>
+			<key>match</key>
+			<string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>headings.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>headings.dokuwiki_st3</string>
+				</dict>
+			</dict>
+		</dict>
+
+
+		<!-- HORIZONTAL RULE -->
+
+        <dict>
+			<key>comment</key>
+			<string>---- creates a horizontal rule</string>
+			<key>match</key>
+			<string>^\s*-{4,}\s*$</string>
+			<key>name</key>
+			<string>meta.separator.dokuwiki_st3</string>
+		</dict>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- UNORDERED LIST -->
+
+        <dict>
+			<key>comment</key>
+			<string>  * unordered list</string>
+
+			<key>begin</key>
+			<string>^((	+)|( {2,}))(\*)</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.list_item.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>$\n?</string>
+
+			<key>name</key>
+			<string>markup.list.unnumbered.dokuwiki_st3</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- ORDERED LIST -->
+
+		<dict>
+			<key>comment</key>
+			<string>  - ordered list</string>
+
+			<key>begin</key>
+			<string>^((	+)|( {2,}))(-)</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.list_item.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>$\n?</string>
+
+			<key>name</key>
+			<string>markup.list.numbered.dokuwiki_st3</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- TABLE -->
+
+		<dict>
+			<key>comment</key>
+			<string>Table</string>
+
+			<key>begin</key>
+			<string>^[|^]</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.table.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>$</string>
+
+			<key>name</key>
+			<string>markup.other.table.dokuwiki_st3</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- <FILE> -->
+
+		<dict>
+			<key>comment</key>
+			<string>&lt;file&gt;file listing&lt;/file&gt;</string>
+
+			<key>begin</key>
+			<string>(&lt;)(file)(&gt;)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.template.dokuwiki_st3</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(&lt;/)(\2)(&gt;)</string>
+
+			<key>name</key>
+			<string>markup.raw.dokuwiki_st3</string>
+		</dict>
+
+
+		<!-- <HTML> -->
+
+		<dict>
+			<key>comment</key>
+			<string>embedded &lt;html&gt;</string>
+
+			<key>begin</key>
+			<string>(&lt;)(html)(&gt;)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.template.block.dokuwiki_st3</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(&lt;/)(\2)(&gt;)</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- <CODE> -->
+
+		<dict>
+			<key>comment</key>
+			<string>  code block</string>
+
+			<key>match</key>
+			<string>^((\s\s)|(\t))[^\*\-].*$</string>
+
+			<key>name</key>
+			<string>markup.raw.dokuwiki_st3</string>
+		</dict>
+
+
+		<!-- <DEL>ETED TEXT -->
+
+		<dict>
+			<key>comment</key>
+			<string>&lt;del&gt;eted text&lt;/del&gt;</string>
+
+			<key>begin</key>
+			<string>(&lt;)(del)(&gt;)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.template.dokuwiki_st3</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(&lt;/)(\2)(&gt;)</string>
+
+			<key>name</key>
+			<string>markup.deleted.dokuwiki_st3</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- <SUB> or <SUP> -->
+
+		<dict>
+			<key>comment</key>
+			<string>&lt;sup&gt;erscript&lt;/sup&gt; or &lt;sub&gt;script&lt;/sub&gt;</string>
+
+			<key>begin</key>
+			<string>(&lt;)(sub|sup)(&gt;)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.template.dokuwiki_st3</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(&lt;/)(\2)(&gt;)</string>
+
+			<key>name</key>
+			<string>markup.other.dokuwiki_st3</string>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+
+
+		<!-- <CODE> -->
+
+		<dict>
+			<key>comment</key>
+			<string>&lt;code&gt;code block&lt;/code&gt;</string>
+
+			<key>begin</key>
+			<string>(&lt;)(code)(?:\s+[^&gt;]*)?(&gt;)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.template.code.dokuwiki_st3</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki_st3</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki_st3</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>(&lt;/)(\2)(&gt;)</string>
+
+			<key>name</key>
+			<string>markup.raw.dokuwiki_st3</string>
+		</dict>
+
+
+
+		<!-- ~~NOTOC~~ -->
+
+        <dict>
+			<key>comment</key>
+			<string>~~NOTOC~~ disables TOC for this page</string>
+
+			<key>match</key>
+			<string>~~NOTOC~~</string>
+
+			<key>name</key>
+			<string>keyword.control.notoc.dokuwiki_st3</string>
+		</dict>
+
+
+		<!-- ~~NOCACHE~~ -->
+
+        <dict>
+			<key>comment</key>
+			<string>~~NOCACHE~~ disables cache for this page</string>
+
+			<key>match</key>
+			<string>~~NOCACHE~~</string>
+
+			<key>name</key>
+			<string>keyword.control.nocache.dokuwiki_st3</string>
+		</dict>
+
+	</array>
+
+
+
+
+
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+ <!-- ########################################################################### -->
+
+
+
+
+
+	<key>repository</key>
+	<dict>
+		<key>inline</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+
+				<!-- MONOSPACED -->
+
+				<dict>
+					<key>comment</key>
+					<string>''monospaced text''</string>
+
+					<key>match</key>
+					<string>('')(.*?)(\1)</string>
+					<!--
+                    <key>contentName</key>
+                    <string>monospace.dokuwiki_st3</string>
+					-->
+					<key>end</key>
+					<string></string>
+
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>monospace.dokuwiki_st3</string>
+						</dict>
+
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+
+
+
+				<!-- ITALICS -->
+
+				<dict>
+					<key>comment</key>
+					<string>//italic text//</string>
+
+					<key>begin</key>
+					<string>(//)(.*?)</string>
+
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+                     </dict>
+
+					<key>end</key>
+					<string>(//)</string>
+
+                     <key>endCaptures</key>
+                     <dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>italic.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+
+
+
+				<!-- BOLD -->
+
+			<dict>
+					<key>comment</key>
+					<string>**bold text**</string>
+
+					<key>begin</key>
+					<string>(\*\*)</string>
+
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+                     </dict>
+
+					<key>end</key>
+					<string>(.*)(\*\*)</string>
+
+                     <key>endCaptures</key>
+                     <dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>bold.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+		</dict>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <key>foobar</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+
+				<!-- UNDERLINED - NOT SUPPORTED -->
+
+				<dict>
+					<key>comment</key>
+					<string>__underlined text__ **NOTE** NOT CURRENTLY SUPPORTED BY SUBLIME TEXT 3</string>
+
+					<key>begin</key>
+					<string>(__)</string>
+
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+	                 </dict>
+
+					<key>end</key>
+					<string>(.*)(__)</string>
+
+	                 <key>endCaptures</key>
+	                 <dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>underline.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>container.inline.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#inline</string>
+						</dict>
+					</array>
+				</dict>
+
+
+
+
+
+
+				<!-- {{IMAGE}} -->
+
+				<dict>
+					<key>comment</key>
+					<string>{{image}}</string>
+
+					<key>match</key>
+					<string>({{)(.+?)(}})</string>
+
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.image.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.image.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>name</key>
+					<string>meta.image.inline.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- [[LINK]] -->
+
+				<dict>
+					<key>comment</key>
+					<string>[[link]]</string>
+
+					<key>match</key>
+					<string>(\[\[)(.+?)(\]\])</string>
+
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>name</key>
+					<string>meta.link.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- [[INTERWIKI]] -->
+
+				<dict>
+					<key>comment</key>
+					<string>[[interwiki&gt;link]]</string>
+
+					<key>match</key>
+					<string>(\[\[)([^\[\]]+&gt;[^|\]]+)(\]\])</string>
+
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+					</dict>
+				</dict>
+
+
+				<!-- AUTO-LINKED BASED ON KEYWORD -->
+
+				<dict>
+					<key>comment</key>
+					<string>auto-link URLs</string>
+
+					<key>match</key>
+					<string>(https?|telnet|gopher|wais|ftp|ed2k|irc)://[\w/\#~:.?+=&amp;%@!\-;,]+?(?=[.:?\-;,]*[^\w/\#~:.?+=&amp;%@!\-;,])</string>
+
+					<key>name</key>
+					<string>markup.underline.link.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- EMAIL -->
+
+				<dict>
+					<key>comment</key>
+                    <string>email addresses</string>
+
+                    <key>match</key>
+					<string>(&lt;)([\w0-9\-_.]+?@[\w\-]+\.[\w\-\.]+\.*[\w]+)(&gt;)</string>
+
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>markup.underline.link.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.link.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>name</key>
+					<string>meta.link.email.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- <NOWIKI> -->
+
+				<dict>
+					<key>comment</key>
+					<string>&lt;nowiki&gt;no formatting&lt;/nowiki&gt;</string>
+
+					<key>begin</key>
+					<string>(&lt;)(nowiki)(&gt;)</string>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>meta.tag.template.dokuwiki_st3</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.dokuwiki_st3</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.tag.dokuwiki_st3</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.tag.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>end</key>
+					<string>(&lt;/)(\2)(&gt;)</string>
+
+					<key>name</key>
+					<string>markup.raw.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- NO-FORMATTING %% -->
+
+				<dict>
+					<key>comment</key>
+					<string>%%no formatting%%</string>
+
+					<key>begin</key>
+					<string>(%%)</string>
+
+					<key>end</key>
+					<string>\1</string>
+
+					<key>name</key>
+					<string>markup.raw.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- NEW LINE -->
+
+				<dict>
+					<key>comment</key>
+					<string>\ followed by whitespace or \n creates a line break</string>
+					<key>match</key>
+					<string>\\\\\s</string>
+					<key>name</key>
+					<string>markup.other.paragraph.dokuwiki_st3</string>
+				</dict>
+
+
+				<!-- DOUBLE-QUOTED TEXT -->
+
+				<dict>
+					<key>comment</key>
+					<string>"double-quoted string"</string>
+
+					<key>begin</key>
+					<string>(")</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.begin.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>end</key>
+					<string>\1</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.end.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>name</key>
+					<string>string.quoted.double.dokuwiki_st3</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\\.</string>
+							<key>name</key>
+							<string>constant.character.escape.dokuwiki_st3</string>
+						</dict>
+					</array>
+				</dict>
+
+
+				<!-- ((FOOTNOTE)) -->
+
+				<dict>
+					<key>comment</key>
+					<string>((footnote))</string>
+
+					<key>begin</key>
+					<string>\(\(</string>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.dokuwiki_st3</string>
+						</dict>
+					</dict>
+
+					<key>end</key>
+					<string>\)\)</string>
+					<key>name</key>
+					<string>comment.block.documentation.dokuwiki_st3</string>
+				</dict>
+            </dict>
+			</array>
+        </dict>
+
+
+
+
+
+		<!-- PHP CODE ENTITIES -->
+
+		<key>php</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.php</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(^\s*)?(?=&lt;php&gt;)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.whitespace.embedded.leading.dokuwiki_st3</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.embedded.php</string>
+					<key>end</key>
+					<string>(?&lt;=&lt;/php&gt;)(?!&lt;php&gt;)(\s*$\n?)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.whitespace.embedded.trailing.dokuwiki_st3</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>((&lt;)(php)(&gt;))</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.embedded.begin.dokuwiki_st3</string>
+								</dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>meta.tag.template.dokuwiki_st3</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.dokuwiki_st3</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>entity.name.tag.dokuwiki_st3</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.dokuwiki_st3</string>
+								</dict>
+							</dict>
+							<key>contentName</key>
+							<string>source.php</string>
+							<key>end</key>
+							<string>(((&lt;/))(php)(&gt;))</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.embedded.end.dokuwiki_st3</string>
+								</dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>meta.tag.template.dokuwiki_st3</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.dokuwiki_st3</string>
+								</dict>
+								<key>3</key>
+								<dict>
+									<key>name</key>
+									<string>source.php</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>entity.name.tag.dokuwiki_st3</string>
+								</dict>
+								<key>5</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.tag.dokuwiki_st3</string>
+								</dict>
+							</dict>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.php</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+
+	<key>scopeName</key>
+	<string>text.html.dokuwiki_st3</string>
+
+	<key>uuid</key>
+	<string>dc3d438f-8237-400b-b25d-19cb3bbdc508</string>
+</dict>
+</plist>
