@@ -9,11 +9,12 @@
 
 	<key>settings</key>
 	<array>
+		<!-- HEADINGS -->
 		<dict>
 			<key>name</key>
 			<string>Headings</string>
 			<key>scope</key>
-			<string>headings.dokuwiki_st3</string>
+			<string>markup.headings.dokuwiki_st3</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -23,11 +24,12 @@
 			</dict>
 		</dict>
 
+		<!-- HORIZONTAL RULE -->
 		<dict>
 			<key>name</key>
 			<string>Horizontal Line</string>
 			<key>scope</key>
-			<string>meta.separator.dokuwiki_st3</string>
+			<string>markup.separator.dokuwiki_st3</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -39,11 +41,12 @@
 			</dict>
 		</dict>
 
+		<!-- PAGE CONTROL MARKERS -->
 		<dict>
 			<key>name</key>
 			<string>Page Control</string>
 			<key>scope</key>
-			<string>keyword.control</string>
+			<string>markup.keyword.control</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -62,7 +65,7 @@
 			<key>name</key>
 			<string>Inline Container Chars </string>
 			<key>scope</key>
-			<string>container.inline</string>
+			<string>markup.container.inline</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -76,7 +79,7 @@
 			<key>name</key>
 			<string>Monospaced</string>
 			<key>scope</key>
-			<string>monospace</string>
+			<string>markup.monospace</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -85,7 +88,6 @@
 				<string>#dddddd</string>
 			</dict>
 		</dict>
-
 
 	</array>
 
