@@ -2,95 +2,95 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>fileTypes</key>
-	<array>
-		<string>txt</string>
-		<string>dokuwiki</string>
-	</array>
+    <key>fileTypes</key>
+    <array>
+        <string>txt</string>
+        <string>dokuwiki</string>
+    </array>
 
-	<key>name</key>
-	<string>DokuWiki ST3</string>
-
-
-	<key>patterns</key>
-	<array>
+    <key>name</key>
+    <string>DokuWiki ST3</string>
 
 
-		<!-- HEADINGS -->
-
-		<dict>
-			<key>comment</key>
-			<string>====== heading ======</string>
-			<key>name</key>
-			<string>markup.headings.dokuwiki_st3</string>
-			<key>match</key>
-			<string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>markup.headings.dokuwiki_st3</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>markup.headings.dokuwiki_st3</string>
-				</dict>
-			</dict>
-		</dict>
+    <key>patterns</key>
+    <array>
 
 
-		<!-- HORIZONTAL RULE -->
+        <!-- HEADINGS -->
 
         <dict>
-			<key>comment</key>
-			<string>---- creates a horizontal rule</string>
-			<key>match</key>
-			<string>^\s*-{4,}\s*$</string>
-			<key>name</key>
-			<string>markup.separator.dokuwiki_st3</string>
-		</dict>
+            <key>comment</key>
+            <string>====== heading ======</string>
+            <key>name</key>
+            <string>markup.headings.dokuwiki_st3</string>
+            <key>match</key>
+            <string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.headings.dokuwiki_st3</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.headings.dokuwiki_st3</string>
+                </dict>
+            </dict>
+        </dict>
 
 
-		<!-- ~~NOTOC~~ -->
+        <!-- HORIZONTAL RULE -->
 
         <dict>
-			<key>comment</key>
-			<string>~~NOTOC~~ disables TOC for this page</string>
-
-			<key>match</key>
-			<string>~~NOTOC~~</string>
-
-			<key>name</key>
-			<string>markup.keyword.control.notoc.dokuwiki_st3</string>
-		</dict>
+            <key>comment</key>
+            <string>---- creates a horizontal rule</string>
+            <key>match</key>
+            <string>^\s*-{4,}\s*$</string>
+            <key>name</key>
+            <string>markup.separator.dokuwiki_st3</string>
+        </dict>
 
 
-		<!-- ~~NOCACHE~~ -->
+        <!-- ~~NOTOC~~ -->
 
         <dict>
-			<key>comment</key>
-			<string>~~NOCACHE~~ disables cache for this page</string>
+            <key>comment</key>
+            <string>~~NOTOC~~ disables TOC for this page</string>
 
-			<key>match</key>
-			<string>~~NOCACHE~~</string>
+            <key>match</key>
+            <string>~~NOTOC~~</string>
 
-			<key>name</key>
-			<string>markup.keyword.control.nocache.dokuwiki_st3</string>
-		</dict>
+            <key>name</key>
+            <string>markup.keyword.control.notoc.dokuwiki_st3</string>
+        </dict>
 
 
-		<!-- INCLUDES -->
+        <!-- ~~NOCACHE~~ -->
 
-		<dict>
-			<key>include</key>
-			<string>#inline</string>
-			<key>comment</key>
-			<string>Include 'inline' items from repository below</string>
-		</dict>
+        <dict>
+            <key>comment</key>
+            <string>~~NOCACHE~~ disables cache for this page</string>
 
-	</array>
+            <key>match</key>
+            <string>~~NOCACHE~~</string>
+
+            <key>name</key>
+            <string>markup.keyword.control.nocache.dokuwiki_st3</string>
+        </dict>
+
+
+        <!-- INCLUDES -->
+
+        <dict>
+            <key>include</key>
+            <string>#inline</string>
+            <key>comment</key>
+            <string>Include 'inline' items from repository below</string>
+        </dict>
+
+    </array>
 
 
  <!-- ########################################################################### -->
@@ -101,59 +101,59 @@
  <!-- ########################################################################### -->
  <!-- ########################################################################### -->
 
-	<key>repository</key>
-	<dict>
+    <key>repository</key>
+    <dict>
 
-		<key>inline</key>
-		<dict>
-			<key>patterns</key>
-			<array>
+        <key>inline</key>
+        <dict>
+            <key>patterns</key>
+            <array>
 
-				<!-- MONOSPACED TEXT -->
-				<dict>
-					<key>include</key>
-					<string>#monospace</string>
-				</dict>
+                <!-- MONOSPACED TEXT -->
+                <dict>
+                    <key>include</key>
+                    <string>#monospace</string>
+                </dict>
 
-				<!-- BOLD -->
-				<dict>
-					<key>include</key>
-					<string>#bold</string>
-				</dict>
+                <!-- BOLD -->
+                <dict>
+                    <key>include</key>
+                    <string>#bold</string>
+                </dict>
 
-			</array>
-		</dict>
+            </array>
+        </dict>
 
-		<key>monospace</key>
-		<dict>
-			<key>comment</key>
-			<string>''monospaced text''</string>
+        <key>monospace</key>
+        <dict>
+            <key>comment</key>
+            <string>''monospaced text''</string>
 
-			<key>match</key>
-			<string>('')(.*?)(\1)</string>
+            <key>match</key>
+            <string>('')(.*?)(\1)</string>
 
-			<key>captures</key>
-			<dict>
-				<!-- make the apostrophe's (the 'containers') fade out -->
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>markup.container.inline.dokuwiki_st3</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>markup.container.inline.dokuwiki_st3</string>
-				</dict>
+            <key>captures</key>
+            <dict>
+                <!-- make the apostrophe's (the 'containers') fade out -->
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.container.inline.dokuwiki_st3</string>
+                </dict>
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.container.inline.dokuwiki_st3</string>
+                </dict>
 
-				<!-- highlight the actual monospaced text -->
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>markup.monospace.dokuwiki_st3</string>
-				</dict>
-			</dict>
-		</dict>
+                <!-- highlight the actual monospaced text -->
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.monospace.dokuwiki_st3</string>
+                </dict>
+            </dict>
+        </dict>
 
         <key>bold</key>
         <dict>
@@ -181,14 +181,14 @@
             </array>
         </dict>
 
-	</dict>
+    </dict>
 
 
 
-	<key>scopeName</key>
-	<string>text.html.dokuwiki_st3</string>
+    <key>scopeName</key>
+    <string>text.html.dokuwiki_st3</string>
 
-	<key>uuid</key>
-	<string>dc3d438f-8237-400b-b25d-19cb3bbdc508</string>
+    <key>uuid</key>
+    <string>dc3d438f-8237-400b-b25d-19cb3bbdc508</string>
 </dict>
 </plist>

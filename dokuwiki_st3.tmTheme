@@ -2,110 +2,110 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>author</key>
-	<string>hArpanet.com</string>
-	<key>name</key>
-	<string>DokuWiki_ST3</string>
+    <key>author</key>
+    <string>hArpanet.com</string>
+    <key>name</key>
+    <string>DokuWiki_ST3</string>
 
-	<key>settings</key>
-	<array>
-		<!-- HEADINGS -->
-		<dict>
-			<key>name</key>
-			<string>Headings</string>
-			<key>scope</key>
-			<string>markup.headings.dokuwiki_st3</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
-				<string>#ff7700</string>
-			</dict>
-		</dict>
+    <key>settings</key>
+    <array>
+        <!-- HEADINGS -->
+        <dict>
+            <key>name</key>
+            <string>Headings</string>
+            <key>scope</key>
+            <string>markup.headings.dokuwiki_st3</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#ff7700</string>
+            </dict>
+        </dict>
 
-		<!-- HORIZONTAL RULE -->
-		<dict>
-			<key>name</key>
-			<string>Horizontal Line</string>
-			<key>scope</key>
-			<string>markup.separator.dokuwiki_st3</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#bbbbbb</string>
-				<key>background</key>
-				<string>#444444</string>
-			</dict>
-		</dict>
+        <!-- HORIZONTAL RULE -->
+        <dict>
+            <key>name</key>
+            <string>Horizontal Line</string>
+            <key>scope</key>
+            <string>markup.separator.dokuwiki_st3</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#bbbbbb</string>
+                <key>background</key>
+                <string>#444444</string>
+            </dict>
+        </dict>
 
-		<!-- PAGE CONTROL MARKERS -->
-		<dict>
-			<key>name</key>
-			<string>Page Control</string>
-			<key>scope</key>
-			<string>markup.keyword.control</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
-				<string>#6969FA</string>
-			</dict>
-		</dict>
+        <!-- PAGE CONTROL MARKERS -->
+        <dict>
+            <key>name</key>
+            <string>Page Control</string>
+            <key>scope</key>
+            <string>markup.keyword.control</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#6969FA</string>
+            </dict>
+        </dict>
 
 
 
-		<!-- GENERAL INLINE CONTAINERS -->
-		<!-- fade container tags to light grey  -->
+        <!-- GENERAL INLINE CONTAINERS -->
+        <!-- fade container tags to light grey  -->
 
-		<dict>
-			<key>name</key>
-			<string>Inline Container Chars </string>
-			<key>scope</key>
-			<string>markup.container.inline</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#aaaa</string>
-			</dict>
-		</dict>
+        <dict>
+            <key>name</key>
+            <string>Inline Container Chars </string>
+            <key>scope</key>
+            <string>markup.container.inline</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#aaaa</string>
+            </dict>
+        </dict>
 
-		<!-- MONOSPACED TEXT -->
+        <!-- MONOSPACED TEXT -->
 
-		<dict>
-			<key>name</key>
-			<string>Monospaced</string>
-			<key>scope</key>
-			<string>markup.monospace</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#000000</string>
-				<key>background</key>
-				<string>#dddddd</string>
-			</dict>
-		</dict>
+        <dict>
+            <key>name</key>
+            <string>Monospaced</string>
+            <key>scope</key>
+            <string>markup.monospace</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#000000</string>
+                <key>background</key>
+                <string>#dddddd</string>
+            </dict>
+        </dict>
 
-		<!-- BOLD -->
+        <!-- BOLD -->
 
-		<dict>
-			<key>name</key>
-			<string>Bold</string>
-			<key>scope</key>
-			<string>markup.bold</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-			</dict>
-		</dict>
+        <dict>
+            <key>name</key>
+            <string>Bold</string>
+            <key>scope</key>
+            <string>markup.bold</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
 
-	</array>
+    </array>
 
-	<key>uuid</key>
-	<string>343011CC-B7DF-11D9-B5C6-000D93C8BE28</string>
+    <key>uuid</key>
+    <string>343011CC-B7DF-11D9-B5C6-000D93C8BE28</string>
 </dict>
 </plist>
