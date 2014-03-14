@@ -21,10 +21,13 @@
         <dict>
             <key>comment</key>
             <string>====== heading ======</string>
+
             <key>name</key>
             <string>markup.headings.dokuwiki_st3</string>
+
             <key>match</key>
             <string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
+
             <key>captures</key>
             <dict>
                 <key>1</key>
@@ -46,8 +49,10 @@
         <dict>
             <key>comment</key>
             <string>---- creates a horizontal rule</string>
+
             <key>match</key>
             <string>^\s*-{4,}\s*$</string>
+
             <key>name</key>
             <string>markup.separator.dokuwiki_st3</string>
         </dict>
@@ -86,6 +91,7 @@
         <dict>
             <key>include</key>
             <string>#inline</string>
+
             <key>comment</key>
             <string>Include 'inline' items from repository below</string>
         </dict>
@@ -124,53 +130,60 @@
             </array>
         </dict>
 
+
         <key>monospace</key>
         <dict>
-            <key>comment</key>
-            <string>''monospaced text''</string>
+            <!-- highlight the actual monospaced text -->
+            <key>name</key>
+            <string>markup.monospace.dokuwiki_st3</string>
 
-            <key>match</key>
-            <string>('')(.*?)(\1)</string>
+            <key>begin</key>
+            <string>('')</string>
+            <key>end</key>
+            <string>(\1)</string>
 
             <key>captures</key>
             <dict>
-                <!-- make the apostrophe's (the 'containers') fade out -->
+                <!-- make the 'containers' (apostrophe's) fade out -->
                 <key>1</key>
                 <dict>
                     <key>name</key>
                     <string>markup.container.inline.dokuwiki_st3</string>
                 </dict>
-                <key>3</key>
-                <dict>
-                    <key>name</key>
-                    <string>markup.container.inline.dokuwiki_st3</string>
-                </dict>
-
-                <!-- highlight the actual monospaced text -->
-                <key>2</key>
-                <dict>
-                    <key>name</key>
-                    <string>markup.monospace.dokuwiki_st3</string>
-                </dict>
             </dict>
+
+            <!-- allow other inline styles inside monospace -->
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#inline</string>
+                </dict>
+            </array>
         </dict>
+
 
         <key>bold</key>
         <dict>
+            <!-- highlight the actual bold text -->
             <key>name</key>
             <string>markup.bold.dokuwiki_st3</string>
+
             <key>begin</key>
             <string>(\*\*)</string>
             <key>end</key>
             <string>(\1)</string>
+
             <key>captures</key>
             <dict>
+                <!-- make the 'containers' (double asterisks) fade out -->
                 <key>1</key>
                 <dict>
                     <key>name</key>
                     <string>markup.container.inline.dokuwiki_st3</string>
                 </dict>
             </dict>
+
             <!-- allow other inline styles inside bold -->
             <key>patterns</key>
             <array>
