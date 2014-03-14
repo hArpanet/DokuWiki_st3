@@ -103,6 +103,7 @@
 
 	<key>repository</key>
 	<dict>
+
 		<key>inline</key>
 		<dict>
 			<key>patterns</key>
@@ -112,6 +113,12 @@
 				<dict>
 					<key>include</key>
 					<string>#monospace</string>
+				</dict>
+
+				<!-- BOLD -->
+				<dict>
+					<key>include</key>
+					<string>#bold</string>
 				</dict>
 
 			</array>
@@ -131,12 +138,12 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>container.inline.dokuwiki_st3</string>
+					<string>markup.container.inline.dokuwiki_st3</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>container.inline.dokuwiki_st3</string>
+					<string>markup.container.inline.dokuwiki_st3</string>
 				</dict>
 
 				<!-- highlight the actual monospaced text -->
@@ -147,6 +154,32 @@
 				</dict>
 			</dict>
 		</dict>
+
+        <key>bold</key>
+        <dict>
+            <key>name</key>
+            <string>markup.bold.dokuwiki_st3</string>
+            <key>begin</key>
+            <string>(\*\*)</string>
+            <key>end</key>
+            <string>(\1)</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.container.inline.dokuwiki_st3</string>
+                </dict>
+            </dict>
+            <!-- allow other inline styles inside bold -->
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#inline</string>
+                </dict>
+            </array>
+        </dict>
 
 	</dict>
 
