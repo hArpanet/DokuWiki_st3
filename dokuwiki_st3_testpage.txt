@@ -1,0 +1,37 @@
+====== DokuWiki Syntax for SublimeText 3 Test Page ======
+
+This test page contains DokuWiki markup for editing within SublimeText 3.
+
+===== Heading 5 =====
+
+==== Heading 4 ====
+
+=== Heading 3 ===
+
+== Heading 2 ==
+
+Next, we will show a 'separator' line...
+
+----
+
+And Indicate that we don't want this page added to the TOC: ~~NOTOC~~
+
+And indicate that we don't want this page to be cached: ~~NOCACHE~~
+
+Note that both ~~NOTOC~~ and ~~NOCACHE~~ are highlighted even though they are not on lines of their own. Should we allow this??
+
+----
+
+==== INLINE STYLE TESTING ====
+
+=== Bold & Monospace ===
+
+This paragraph of text contains **bold** text. It also contains ''monospaced'' text. Both **bold** and ''monospaced'' are separate entities.
+
+This paragraph of text has some normal text, **and some bold text, with some ''monospaced text'' embedded within it**.
+
+Note that (by intent) you cannot have bold text within monospaced text: ''this monospace text **doesn't show bold** within it!''. Does DokuWiki allow this?
+
+----
+
+~~END OF TEST PAGE~~
