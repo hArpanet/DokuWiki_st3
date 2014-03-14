@@ -115,6 +115,12 @@
             <key>patterns</key>
             <array>
 
+                <!-- EMOTICONS -->
+                <dict>
+                    <key>include</key>
+                    <string>#emoticon</string>
+                </dict>
+
                 <!-- MONOSPACED TEXT -->
                 <dict>
                     <key>include</key>
@@ -128,6 +134,17 @@
                 </dict>
 
             </array>
+        </dict>
+
+
+        <key>emoticon</key>
+        <dict>
+            <!-- highlight the actual emoticon -->
+            <key>name</key>
+            <string>markup.emoticon.dokuwiki_st3</string>
+
+            <key>match</key>
+            <string>(FIXME!|FIXME|DELETEME!|DELETEME|LOL|8-\)|8-O|:-\(|:-\)|=\)|:-/|:-\\|:-\?|:-D|:-P|:-O|:-X|:-\||;-\)|\^_\^|:\?:|:!:)</string>
         </dict>
 
 

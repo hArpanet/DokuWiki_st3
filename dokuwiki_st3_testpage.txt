@@ -24,11 +24,23 @@ Note that both ~~NOTOC~~ and ~~NOCACHE~~ are highlighted even though they are no
 
 ==== INLINE STYLE TESTING ====
 
-=== Bold & Monospace ===
+=== Bold, Monospace ===
 
-This paragraph of text contains **bold** text. It also contains ''monospaced'' text. Both **bold** and ''monospaced'' are separate entities.
+This paragraph of text contains **bold** text, and ''monospaced'' text.
 
-This paragraph of text has **some bold text, with ''monospaced text'' embedded within it**. You can also have ''monospace text **with bold** within it!''.
+=== Combinations ===
+
+We have ''monospace with **bold** within it.''
+or **bold with ''monospace'' within it.**
+
+
+=== Emoticons ===
+
+LOL
+FIXME    or FIXME!
+DELETEME or DELETEME!
+
+8-) 8-O :-( :-) =) :-/ :-\ :-? :-D :-P :-O :-X :-| ;-) ^_^ :?: :!:
 
 ----
 

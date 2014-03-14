@@ -56,6 +56,22 @@
             </dict>
         </dict>
 
+        <!-- EMOTICONS -->
+        <dict>
+            <key>name</key>
+            <string>EMOTICONS</string>
+            <key>scope</key>
+            <string>markup.emoticon.dokuwiki_st3</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#000000</string>
+                <key>background</key>
+                <string>#f2ff00</string>
+            </dict>
+        </dict>
 
 
         <!-- GENERAL INLINE CONTAINERS -->
