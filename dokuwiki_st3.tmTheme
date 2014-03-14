@@ -119,6 +119,20 @@
             </dict>
         </dict>
 
+        <!-- ITALICS -->
+
+        <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>scope</key>
+            <string>markup.italic</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+
     </array>
 
     <key>uuid</key>

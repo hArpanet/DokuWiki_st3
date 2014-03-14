@@ -133,6 +133,12 @@
                     <string>#bold</string>
                 </dict>
 
+                <!-- ITALICS -->
+                <dict>
+                    <key>include</key>
+                    <string>#italic</string>
+                </dict>
+
             </array>
         </dict>
 
@@ -202,6 +208,42 @@
             </dict>
 
             <!-- allow other inline styles inside bold -->
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#italic</string>
+                </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#inline</string>
+                </dict>
+            </array>
+        </dict>
+
+
+        <key>italic</key>
+        <dict>
+            <!-- highlight the actual italic text -->
+            <key>name</key>
+            <string>markup.italic.dokuwiki_st3</string>
+
+            <key>begin</key>
+            <string>(^://|//)</string>
+            <key>end</key>
+            <string>(\1)</string>
+
+            <key>captures</key>
+            <dict>
+                <!-- make the 'containers' (double slash) fade out -->
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.container.inline.dokuwiki_st3</string>
+                </dict>
+            </dict>
+
+            <!-- allow other inline styles inside italic -->
             <key>patterns</key>
             <array>
                 <dict>

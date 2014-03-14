@@ -24,14 +24,20 @@ Note that both ~~NOTOC~~ and ~~NOCACHE~~ are highlighted even though they are no
 
 ==== INLINE STYLE TESTING ====
 
-=== Bold, Monospace ===
+=== Bold, Italic, Monospace ===
 
-This paragraph of text contains **bold** text, and ''monospaced'' text.
+This paragraph of text contains **bold** text, and //italic// text, and ''monospaced'' text.
 
 === Combinations ===
 
-We have ''monospace with **bold** within it.''
-or **bold with ''monospace'' within it.**
+We have ''monospace with **bold** and //italic// within it.''
+or **bold with ''monospace'' and //italic// within it.** FIXME! (italics not in bold)
+or //italic with ''monospace'' and **bold** within it.// FIXME! (bold not in italics)
+
+== URL tests ==
+
+Do we have problems with //italic with an url within it (http://harpanet.com)// oops!// FIXME! (url double slash closes italics)
+Or even ''monospaced text with an url like http://harpanet.com'' which doesn't close the monotext or italics, oops! FIXME!
 
 
 === Emoticons ===
