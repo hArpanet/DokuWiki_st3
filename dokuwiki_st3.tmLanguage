@@ -23,7 +23,7 @@
             <string>====== heading ======</string>
 
             <key>name</key>
-            <string>markup.heading.dokuwiki_st3</string>
+            <string>markup.headings.dokuwiki_st3</string>
 
             <key>match</key>
             <string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
@@ -33,12 +33,12 @@
                 <key>1</key>
                 <dict>
                     <key>name</key>
-                    <string>markup.heading.dokuwiki_st3</string>
+                    <string>markup.headings.dokuwiki_st3</string>
                 </dict>
                 <key>3</key>
                 <dict>
                     <key>name</key>
-                    <string>markup.heading.dokuwiki_st3</string>
+                    <string>markup.headings.dokuwiki_st3</string>
                 </dict>
             </dict>
         </dict>
