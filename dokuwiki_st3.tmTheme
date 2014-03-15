@@ -14,7 +14,7 @@
             <key>name</key>
             <string>Headings</string>
             <key>scope</key>
-            <string>markup.headings.dokuwiki_st3</string>
+            <string>markup.heading.dokuwiki_st3</string>
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
