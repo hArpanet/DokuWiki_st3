@@ -28,17 +28,13 @@ Note that both ~~NOTOC~~ and ~~NOCACHE~~ are highlighted even though they are no
 
 This paragraph of text contains **bold** text, and //italic// text, and ''monospaced'' text.
 
+If we have some //italic containing an url (http://harpanet.com)// then the double-slash in the url shouldn't cancel the italic.
+
 === Combinations ===
 
 We have ''monospace with **bold** and //italic// within it.''
 or **bold with ''monospace'' and //italic// within it.** FIXME! (italics not in bold)
 or //italic with ''monospace'' and **bold** within it.// FIXME! (bold not in italics)
-
-== URL tests ==
-
-Do we have problems with //italic with an url within it (http://harpanet.com)// oops!// FIXME! (url double slash closes italics)
-Or even ''monospaced text with an url like http://harpanet.com'' which doesn't close the monotext or italics, oops! FIXME!
-
 
 === Emoticons ===
 

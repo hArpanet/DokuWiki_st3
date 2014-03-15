@@ -212,10 +212,6 @@
             <array>
                 <dict>
                     <key>include</key>
-                    <string>#italic</string>
-                </dict>
-                <dict>
-                    <key>include</key>
                     <string>#inline</string>
                 </dict>
             </array>
@@ -229,14 +225,14 @@
             <string>markup.italic.dokuwiki_st3</string>
 
             <key>begin</key>
-            <string>(^://|//)</string>
+            <string>(?&lt;!:)//</string>
             <key>end</key>
-            <string>(\1)</string>
+            <string>(?&lt;!:)//</string>
 
             <key>captures</key>
             <dict>
                 <!-- make the 'containers' (double slash) fade out -->
-                <key>1</key>
+                <key>0</key>
                 <dict>
                     <key>name</key>
                     <string>markup.container.inline.dokuwiki_st3</string>
