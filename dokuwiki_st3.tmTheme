@@ -14,7 +14,7 @@
             <key>name</key>
             <string>Headings</string>
             <key>scope</key>
-            <string>markup.headings.dokuwiki_st3</string>
+            <string>markup.heading.dokuwiki_st3</string>
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
@@ -130,6 +130,20 @@
             <dict>
                 <key>fontStyle</key>
                 <string>italic</string>
+            </dict>
+        </dict>
+
+        <!-- BOLD+ITALICS -->
+
+        <dict>
+            <key>name</key>
+            <string>BoldItalic</string>
+            <key>scope</key>
+            <string>markup.bolditalic</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold italic</string>
             </dict>
         </dict>
 

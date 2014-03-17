@@ -23,7 +23,7 @@
             <string>====== heading ======</string>
 
             <key>name</key>
-            <string>markup.headings.dokuwiki_st3</string>
+            <string>markup.heading.dokuwiki_st3</string>
 
             <key>match</key>
             <string>^\s*(={2,6})(.*)(\1)\s*$\n?</string>
@@ -33,12 +33,12 @@
                 <key>1</key>
                 <dict>
                     <key>name</key>
-                    <string>markup.headings.dokuwiki_st3</string>
+                    <string>markup.heading.dokuwiki_st3</string>
                 </dict>
                 <key>3</key>
                 <dict>
                     <key>name</key>
-                    <string>markup.headings.dokuwiki_st3</string>
+                    <string>markup.heading.dokuwiki_st3</string>
                 </dict>
             </dict>
         </dict>
@@ -167,7 +167,7 @@
 
             <key>captures</key>
             <dict>
-                <!-- make the 'containers' (apostrophe's) fade out -->
+                <!-- fade out the 'containers' (apostrophe's) -->
                 <key>1</key>
                 <dict>
                     <key>name</key>
@@ -175,7 +175,7 @@
                 </dict>
             </dict>
 
-            <!-- allow other inline styles inside monospace -->
+            <!-- allow other inline styles -->
             <key>patterns</key>
             <array>
                 <dict>
@@ -199,7 +199,7 @@
 
             <key>captures</key>
             <dict>
-                <!-- make the 'containers' (double asterisks) fade out -->
+                <!-- fade out the 'containers' (double asterisks) -->
                 <key>1</key>
                 <dict>
                     <key>name</key>
@@ -207,9 +207,30 @@
                 </dict>
             </dict>
 
-            <!-- allow other inline styles inside bold -->
+            <!-- allow other inline styles -->
             <key>patterns</key>
             <array>
+                <dict>
+                    <!-- highlight any italic sub-text -->
+                    <key>name</key>
+                    <string>markup.bolditalic.dokuwiki_st3</string>
+
+                    <key>begin</key>
+                    <string>(?&lt;!:)//</string>
+                    <key>end</key>
+                    <string>(?&lt;!:)//</string>
+
+                    <key>captures</key>
+                    <dict>
+                        <!-- fade out the 'containers' (double slash) -->
+                        <key>0</key>
+                        <dict>
+                            <key>name</key>
+                            <string>markup.container.inline.dokuwiki_st3</string>
+                        </dict>
+                    </dict>
+                </dict>
+
                 <dict>
                     <key>include</key>
                     <string>#inline</string>
@@ -231,7 +252,7 @@
 
             <key>captures</key>
             <dict>
-                <!-- make the 'containers' (double slash) fade out -->
+                <!-- fade out the 'containers' (double slash) -->
                 <key>0</key>
                 <dict>
                     <key>name</key>
@@ -239,9 +260,30 @@
                 </dict>
             </dict>
 
-            <!-- allow other inline styles inside italic -->
+            <!-- allow other inline styles -->
             <key>patterns</key>
             <array>
+                <dict>
+                    <!-- highlight any bold sub-text -->
+                    <key>name</key>
+                    <string>markup.bolditalic.dokuwiki_st3</string>
+
+                    <key>begin</key>
+                    <string>(\*\*)</string>
+                    <key>end</key>
+                    <string>(\1)</string>
+
+                    <key>captures</key>
+                    <dict>
+                        <!-- fade out the 'containers' (double asterisks) -->
+                        <key>1</key>
+                        <dict>
+                            <key>name</key>
+                            <string>markup.container.inline.dokuwiki_st3</string>
+                        </dict>
+                    </dict>
+                </dict>
+
                 <dict>
                     <key>include</key>
                     <string>#inline</string>
