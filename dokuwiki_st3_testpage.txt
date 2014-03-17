@@ -33,8 +33,8 @@ If we have some //italic containing an url (http://harpanet.com)// then the doub
 === Combinations ===
 
 We have ''monospace with **bold** and //italic// within it.''
-or **bold with ''monospace'' and //italic// within it.** FIXME! (italics not in bold)
-or //italic with ''monospace'' and **bold** within it.// FIXME! (bold not in italics)
+or **bold with ''monospace'' and //italic// within it.**
+or //italic with ''monospace'' and **bold** within it.//
 
 === Emoticons ===
 
