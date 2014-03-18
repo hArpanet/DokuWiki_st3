@@ -46,10 +46,18 @@ DELETEME or DELETEME!
 
 ==== CODE BLOCKS ====
 
-<file php file.php>
-    // this is some php
-    $var = 'some text';
+<code>
+    //some generic code
+</code>
+
+<file php>
+    //some php code using <file> tag
 </file>
+
+<code php file.php>
+    // some php code with filename specified
+    $var = 'some text';
+</code>
 
 
 ----

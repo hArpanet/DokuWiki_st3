@@ -312,7 +312,7 @@
             <string>markup.container.code.dokuwiki_st3</string>
 
             <key>begin</key>
-            <string>(&lt;(code|CODE|file|FILE)(\s*.*\s)(\s*.*[.].*)&gt;)</string>
+            <string>(&lt;(code|CODE|file|FILE)(\s*.*\s){0,1}(.*[.]{0,1}.*)&gt;)</string>
             <key>end</key>
             <string>(&lt;/(code|CODE|file|FILE)&gt;).*\n</string>
 
