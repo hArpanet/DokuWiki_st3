@@ -115,6 +115,12 @@
             <key>patterns</key>
             <array>
 
+                <!-- CODE BLOCKS -->
+                <dict>
+                    <key>include</key>
+                    <string>#code</string>
+                </dict>
+
                 <!-- EMOTICONS -->
                 <dict>
                     <key>include</key>
@@ -298,6 +304,49 @@
             </array>
         </dict>
 
+
+        <key>code</key>
+        <dict>
+            <!-- style the code container -->
+            <key>name</key>
+            <string>markup.container.code.dokuwiki_st3</string>
+
+            <key>begin</key>
+            <string>(&lt;(code|CODE|file|FILE)(\s*.*\s)(\s*.*[.].*)&gt;)</string>
+            <key>end</key>
+            <string>(&lt;/(code|CODE|file|FILE)&gt;).*\n</string>
+
+            <key>captures</key>
+            <dict>
+                <!-- fade out the code tags -->
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.container.block.dokuwiki_st3</string>
+                </dict>
+                <!-- highlight the language identifier eg. php -->
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.code.type.dokuwiki_st3</string>
+                </dict>
+                <!-- highlight a filename if specified -->
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>markup.filename.dokuwiki_st3</string>
+                </dict>
+            </dict>
+
+            <!-- apply specific code types -->
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>source.php</string>
+                </dict>
+            </array>
+        </dict>
     </dict>
 
 

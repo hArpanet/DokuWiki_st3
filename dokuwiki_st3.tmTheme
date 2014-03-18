@@ -9,6 +9,15 @@
 
     <key>settings</key>
     <array>
+        <!-- GENERAL SETTINGS -->
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>selection</key>
+                <string>#FFF2DB</string>
+            </dict>
+        </dict>
+
         <!-- HEADINGS -->
         <dict>
             <key>name</key>
@@ -70,6 +79,54 @@
                 <string>#000000</string>
                 <key>background</key>
                 <string>#f2ff00</string>
+            </dict>
+        </dict>
+
+
+        <!-- BLOCK CONTAINER -->
+
+        <dict>
+            <key>name</key>
+            <string>Block Containers</string>
+            <key>scope</key>
+            <string>markup.container.block</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#aaaaff</string>
+            </dict>
+        </dict>
+
+        <!-- CODE CONTAINER -->
+        <dict>
+            <key>name</key>
+            <string>Block Containers</string>
+            <key>scope</key>
+            <string>markup.container.code</string>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#DBFDFF</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Code Type</string>
+            <key>scope</key>
+            <string>markup.code.type</string>
+            <key>settings</key>
+            <dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Filenames</string>
+            <key>scope</key>
+            <string>markup.filename</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#0000bb</string>
             </dict>
         </dict>
 
