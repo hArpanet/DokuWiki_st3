@@ -239,6 +239,13 @@
         </dict>
 
 
+        <!-- TODO:  Fix incorrect url recognition?
+
+            In text like '//As an example, I propose://'
+            the final // would not cancel italics because it would currently
+            be recognised as part of an url.
+            Current workaround: place a space after the :
+        -->
         <key>italic</key>
         <dict>
             <!-- highlight the actual italic text -->
