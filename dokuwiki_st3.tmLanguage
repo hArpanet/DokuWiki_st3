@@ -120,6 +120,10 @@
                     <key>include</key>
                     <string>#code</string>
                 </dict>
+                <dict>
+                    <key>include</key>
+                    <string>#code2</string>
+                </dict>
 
                 <!-- EMOTICONS -->
                 <dict>
@@ -346,6 +350,14 @@
                     <string>source.php</string>
                 </dict>
             </array>
+        </dict>
+        <key>code2</key>
+        <dict>
+            <!-- code line with 2 spaces -->
+            <key>match</key>
+            <string>^((\s\s)|(\t))[^\*\-].*$</string>
+            <key>name</key>
+            <string>markup.container.code.dokuwiki_st3</string>
         </dict>
     </dict>
 

@@ -59,6 +59,10 @@ DELETEME or DELETEME!
     $var = 'some text';
 </code>
 
+  // and some code with just an indent (note: // not identified as italics)
+  $this='is an example';
+
+  * this is not code // it is a bullet point // so italics work
 
 ----
 
