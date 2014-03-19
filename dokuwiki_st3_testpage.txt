@@ -24,17 +24,27 @@ Note that both ~~NOTOC~~ and ~~NOCACHE~~ are highlighted even though they are no
 
 ==== INLINE STYLE TESTING ====
 
-=== Bold, Italic, Monospace ===
+=== Bold, Italic, Monospace, Raw (nowiki) Text ===
 
-This paragraph of text contains **bold** text, and //italic// text, and ''monospaced'' text.
+This paragraph of text contains **bold** text, and //italic// text, and ''monospaced'' text and %%raw%% text.
 
 If we have some //italic containing an url (http://harpanet.com)// then the double-slash in the url shouldn't cancel the italic.
+
+Raw text <nowiki>can also be //identified// by the <nowiki> tags</nowiki>.
 
 === Combinations ===
 
 We have ''monospace with **bold** and //italic// within it.''
 or **bold with ''monospace'' and //italic// within it.**
 or //italic with ''monospace'' and **bold** within it.//
+
+We also have %%RAW TEXT //with no italic// **or bold**
+or ''monospaced'' which continues until closed%% like this.
+
+FIXME! BUT, all sorts of problems with raw text inside italics if the raw text contains the double-slash italic markers...
+But what about //italics with %%raw // text %%inside it//?     (%% this closing raw-text marker is temporary, it cancels the problematic effects)
+DokuWiki shows the raw text in italics, as above, but the **double-slash** in the raw text does not cancel the italics. How to FIXME?
+FIXME! The same problems occur with **bold** or ''monospace'' markers if %%raw text with ** or '' %% is inserted into them!
 
 === Emoticons ===
 

@@ -162,6 +162,22 @@
             </dict>
         </dict>
 
+        <!-- RAW TEXT -->
+
+        <dict>
+            <key>name</key>
+            <string>Raw</string>
+            <key>scope</key>
+            <string>markup.raw</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#52401B</string>
+                <key>background</key>
+                <string>#efefef</string>
+            </dict>
+        </dict>
+
         <!-- BOLD -->
 
         <dict>
